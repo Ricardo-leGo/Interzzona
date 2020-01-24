@@ -1,9 +1,83 @@
 
+body{
+    text-align: center;
+    margin: 0;
+    padding:0;
+    color: #F4F5F0;
+background-color: #212426;font-family: 'Baumans', cursive;
+}
 
+
+main{
+    margin:0 auto;
+    padding:0;
+    width:95%;
+    
+
+}
+h3{
+    margin: 0;
+    padding:0;
+    font-size: 3rem;
+}
+
+main>img{
+    display: inline;
+    float: left;
+    height: auto;
+    width: 50%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 1.5%;
+
+}
+main>p{
+display: block;
+margin: 0 auto;
+margin-left: 15%;
+margin-top:3%;
+line-height: 1.5;
+    width: 60%;
+    text-align: rigth;
+    font-size: 1.4em;
+    padding-left: 20%;
+    border:5px solid goldenrod;
+
+    
+
+}
 canvas{
     border: 2px solid black;
     display:block;
     margin:5% auto;
+}
 
+section{
+    height:80%;
+    width:90vw;
+    margin: 0 auto;
+    padding:0
+
+}
+section>h1{
+    text-align: left;
+    font-size: 2.2rem;
+
+
+
+}
+section>p{
+    text-align: left;
+    margin: 2%;
+    padding:2%;
+    margin: 0 auto;
+    width: 85%;
+    height: 15vh;
+    font-size: 1.5rem;
+}
+
+#btns{
+    width: 50%;
+    display: block;
 
 }
