@@ -214,24 +214,23 @@ class Personaje2{
 
     }
 
+    // shoting(){
 
-    shoting(){
-
-            posx = this.x
-            posy -= this.y
+    //         posx = this.x
+    //         posy -= this.y
 
 
 
         
-        let posx=0, poy=0, velx=0,vely=0, radio=45
-        ctx.beginPath()
-        ctx.ctx.arc(posx, posy,radio , 0, Math.PI*2, false);
-        ctx.fill()
+    //     let posx=0, poy=0, velx=0,vely=0, radio=45
+    //     ctx.beginPath()
+    //     ctx.ctx.arc(posx, posy,radio , 0, Math.PI*2, false);
+    //     ctx.fill()
 
 
 
 
-    }
+    // }
 
 }
 
@@ -286,6 +285,8 @@ function update(){
         boss.draw()
         protaGonista.draw()
         prot2.draw()
+        lifeBars()
+
         generatebullets()
 
     protaGonista.y +=protaGonista.vy
@@ -298,8 +299,17 @@ function update(){
   
 function lifeBars(){
     ctx.beginPath();
-    ctx.rect(20, 20, 150, 100);
+    ctx.fillStyle= "#FF0000";
+    ctx.fillRect(20, 20, 350, 100)
     ctx.stroke();
+
+
+
+
+   
+     ctx.fillStyle= "#FF0000";
+     ctx.fillRect(canvas.width-20-350, 20, 350, 100)
+     ctx.stroke();
 
 }
 
@@ -317,7 +327,6 @@ function lifeBars(){
    
     balas1.push(new bullet(120,canvas.height-240 , false))
 
-    // balas2.push(new bullet()
     
   
 }
@@ -350,7 +359,7 @@ keys[keyCode]=true
     }else if(keyCode==79){
         prot2 .left()
     }else if (keyCode==16) {
-        prot2 .shoootboos()
+        prot2.shoootboos()
 // varShoot=true        
     }
 })
@@ -364,4 +373,3 @@ document.addEventListener('keyup', ({keyCode})=>{
 })
 
 
-lifeBars()
