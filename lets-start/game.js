@@ -164,7 +164,7 @@ class Personaje2{
         ctx.drawImage(this.image,
             this.sx,
             this.sy,
-            85,
+            85*-1,
             240,
             this.x,
             this.y,
@@ -182,11 +182,11 @@ class Personaje2{
     }
 
     rigth(){
-        this.x +=30;
+        this.x -=30;
         this.move()
     }
     left(){
-        this.x-=30;
+        this.x+=30;
         this.move()
     }
     move(){
@@ -333,6 +333,13 @@ keys[keyCode]=true
         protaGonista.salta()
     }else if (keyCode==82) {
         protaGonista.shoootboos()
+// varShoot=true        
+    }else if(keyCode==102){
+        prot2.rigth()
+    }else if(keyCode==100){
+        prot2 .left()
+    }else if (keyCode==76) {
+        prot2 .shoootboos()
 // varShoot=true        
     }
 })
