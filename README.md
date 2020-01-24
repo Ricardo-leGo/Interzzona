@@ -18,7 +18,6 @@ https://raw.githubusercontent.com/Ricardo-leGo/Interzzona/master/lets-start/btn.
 ## 1. El funcionamiento 
 
 :::info
-
 ![](https://raw.githubusercontent.com/Ricardo-leGo/Interzzona/master/lets-start/btn.png)
 
 ```bash
@@ -34,6 +33,7 @@ starter_code
 
 Resolver las físicas del juego. 
 
+![](https://github.com/Ricardo-leGo/Interzzona/blob/master/screencapture.jpg)
 
 
 
