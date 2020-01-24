@@ -156,10 +156,10 @@ class Personaje2{
         this.x = x
         this.y = y
         this.width = 85
-        this.height = 240
+        this.height = 480
         this.sx =0
         this.sy=0
-        this.alturaprot= 240
+        this.alturaprot= 250
         this.fuerzadesalto=12
         this.vy= .03
         this.vx=0
@@ -178,13 +178,13 @@ class Personaje2{
         }else{
             this.vy ++
         }
-         if(this.sx>=595){
-            this.sx = 0}
+         if(this.sx<=0){
+            this.sx = 269}
 
         ctx.drawImage(this.image,
             this.sx,
             this.sy,
-            85*-1,
+            (269/7)*(-1) ,
             240,
             this.x,
             this.y,
@@ -214,24 +214,23 @@ class Personaje2{
 
     }
 
+    // shoting(){
 
-    shoting(){
-
-            posx = this.x
-            posy -= this.y
+    //         posx = this.x
+    //         posy -= this.y
 
 
 
         
-        let posx=0, poy=0, velx=0,vely=0, radio=45
-        ctx.beginPath()
-        ctx.ctx.arc(posx, posy,radio , 0, Math.PI*2, false);
-        ctx.fill()
+    //     let posx=0, poy=0, velx=0,vely=0, radio=45
+    //     ctx.beginPath()
+    //     ctx.ctx.arc(posx, posy,radio , 0, Math.PI*2, false);
+    //     ctx.fill()
 
 
 
 
-    }
+    // }
 
 }
 
@@ -252,10 +251,10 @@ class bullet{
     this.y+= this.vy
     this.x+=this.vx
     if (this.y<0){
-        this.y = this.y
+    this.y = this.y
     }
 
-    ctx.beginPath()
+   ctx.beginPath()
    ctx.arc(this.x, this.y, 35,0,2*Math.PI,false)
    ctx.fill();
 
@@ -285,7 +284,9 @@ function update(){
         background.draw()
         boss.draw()
         protaGonista.draw()
-        // prot2.draw()
+        prot2.draw()
+        lifeBars()
+
         generatebullets()
 
     protaGonista.y +=protaGonista.vy
@@ -296,6 +297,23 @@ function update(){
 }
 
   
+function lifeBars(){
+    ctx.beginPath();
+    ctx.fillStyle= "#FF0000";
+    ctx.fillRect(20, 20, 350, 100)
+    ctx.stroke();
+
+
+
+
+   
+     ctx.fillStyle= "#FF0000";
+     ctx.fillRect(canvas.width-20-350, 20, 350, 100)
+         ctx.stroke();
+
+}
+
+
    setInterval(update,1000/60)
 
 
@@ -306,11 +324,9 @@ function update(){
         
         const positioniBulletx = protaGonista.x;
         const positioniBullety =  protaGonista.y+500
-        console.log(protaGonista.y);
    
     balas1.push(new bullet(120,canvas.height-240 , false))
 
-    // balas2.push(new bullet()
     
   
 }
@@ -338,12 +354,12 @@ keys[keyCode]=true
     }else if (keyCode==82) {
         protaGonista.shoootboos()
 // varShoot=true        
-    }else if(keyCode==102){
+    }else if(keyCode==80){
         prot2.rigth()
-    }else if(keyCode==100){
+    }else if(keyCode==79){
         prot2 .left()
-    }else if (keyCode==76) {
-        prot2 .shoootboos()
+    }else if (keyCode==16) {
+        prot2.shoootboos()
 // varShoot=true        
     }
 })
