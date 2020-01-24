@@ -309,7 +309,7 @@ function lifeBars(){
    
      ctx.fillStyle= "#FF0000";
      ctx.fillRect(canvas.width-20-350, 20, 350, 100)
-     ctx.stroke();
+         ctx.stroke();
 
 }
 
